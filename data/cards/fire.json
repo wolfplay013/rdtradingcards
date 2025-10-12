@@ -1,0 +1,19 @@
+{
+  "groupname": "fire",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "firer",
+	  "name": "Fire (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Kin)",
+	  "smell": "Amber",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427009967319420968/firer.png"
+	}]
+}

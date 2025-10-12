@@ -1,0 +1,35 @@
+{
+  "groupname": "expi",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "expir",
+	  "name": "Expi (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Adipemdragon)",
+	  "smell": "Cement",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426993744686874755/expir.png"
+	},
+    {
+	  "chance": 0.75,
+	  "filename": "expialt_r",
+	  "name": "Expi (Alternative Rare)",
+	  "type": "Alternative Rare",
+	  "description": "(Art by CV35W)",
+	  "smell": "Relics",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "pocketdimension": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426991316390248654/expialt_r.png"
+	}
+  ]
+}

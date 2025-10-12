@@ -20,13 +20,12 @@
     {
       "chance": 2,
       "filename": "aimeebaysr",
-      "name": "Aimee Bay (Rare)",
-      "type": "Rare",
+      "name": "Aimee Bay (Super Rare)",
+      "type": "Super Rare",
       "description": "(Art by Claire de Lune)",
       "smell": "Bacterial infection",
       "season": 11,
       "bonuses": {
-        "okamiiscollar": true,
         "oversizedstethoscope": true,
         "fanonplaceholder": true
       },

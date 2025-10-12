@@ -1,0 +1,19 @@
+{
+  "groupname": "vela",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "velar",
+	  "name": "Vela (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Adipemdragon)",
+	  "smell": "Memories",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427000678634749974/velar.png"
+	}]
+}

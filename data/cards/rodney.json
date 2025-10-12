@@ -72,6 +72,21 @@
 		"fanonplaceholder": true
 	  },
 	  "embed": "https://cdn.discordapp.com/attachments/829197797789532181/968949040081428490/rodneydc.png"
+	},
+	{
+	  "chance": 1,
+	  "filename": "rodneyalt",
+	  "name": "Rodney (Alternative)",
+	  "type": "Alternative",
+	  "description": "(Art by DPS2004)",
+	  "smell": "Juxtaposition",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+		"pocketdimension": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427007661991268402/rodneyalt.png"
 	}
   ]
 }
