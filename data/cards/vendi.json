@@ -1,0 +1,19 @@
+{
+  "groupname": "vendi",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "vendir",
+	  "name": "Vendi (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Adipemdragon, DeadlySprinklez)",
+	  "smell": "Drums",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426997860875894806/vendir.png"
+	}]
+}

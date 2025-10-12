@@ -1,0 +1,19 @@
+{
+  "groupname": "felix",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "felixr",
+	  "name": "Felix (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Kin)",
+	  "smell": "Pillows",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427003172370780331/felixr.png"
+	}]
+}

@@ -1,0 +1,21 @@
+{
+  "groupname": "aimeemetanoia",
+  "basechance": 3,
+  "cards": [
+    {
+      "chance": 3,
+      "filename": "aimeemetanoiar",
+      "name": "Aimee Metanoia (Rare)",
+      "type": "Rare",
+      "description": "(Art by Noche)",
+      "smell": "Other worlds",
+      "season": 11,
+      "bonuses": {
+        "okamiiscollar": true,
+        "oversizedstethoscope": true,
+        "fanonplaceholder": true
+      },
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427005973121470586/aimeemetanoiar.png"
+    }
+  ]
+}

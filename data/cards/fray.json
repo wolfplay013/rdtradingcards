@@ -1,0 +1,19 @@
+{
+  "groupname": "fray",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "frayr",
+	  "name": "Fray (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Zorestrough)",
+	  "smell": "Crops",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1427003914217066688/frayr.png"
+	}]
+}

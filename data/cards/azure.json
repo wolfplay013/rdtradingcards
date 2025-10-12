@@ -1,0 +1,19 @@
+{
+  "groupname": "azure",
+  "basechance": 3,
+  "cards": [{
+	  "chance": 3,
+	  "filename": "azurer",
+	  "name": "Azure (Rare)",
+	  "type": "Rare",
+	  "description": "(Art by Adipemdragon, DeadlySprinklez)",
+	  "smell": "Melodies",
+	  "season": 11,
+	  "bonuses": {
+		"oversizedstethoscope": true,
+		"fanonplaceholder": true,
+        "okamiiscollar": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426997860477702285/azurer.png"
+	}]
+}
