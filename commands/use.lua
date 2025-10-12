@@ -101,6 +101,7 @@ function command.run(message, mt,bypass)
       message.channel:send(formatstring(lang.unknown, {mt[1]}))
     end
   end
+  print("that's worrying if this is a room")
   dpf.savejson("savedata/worldsave.json", wj)
   dpf.savejson("savedata/" .. message.author.id .. ".json",uj)
 end

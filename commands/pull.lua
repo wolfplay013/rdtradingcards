@@ -10,14 +10,14 @@ local time = sw:getTime()
     return
   end
 
-  local cooldown = 11.5
+  local cooldown = config.cooldowns.pull
 
   if not uj.equipped then
     uj.equipped = "nothing"
   end
 
   if uj.equipped == "stoppedwatch" then
-    cooldown = 10
+    cooldown = config.cooldowns.pull_stopwatch
   end
 
   if not uj.storedpulls then
@@ -28,7 +28,7 @@ local time = sw:getTime()
 	uj.acepulls = 0
   end
 
-  local maxcryopodstorage = 3
+  local maxcryopodstorage = config.cooldowns.pull_cryopod_max
   
   
   if uj.equipped == "sparecryopod" then

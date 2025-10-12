@@ -26,6 +26,18 @@ _G['cmdre'] = {}
 _G['cmdcons'] = {}
 
 _G['tr'] = {}
+_G['isauthoradmin'] = function(message)
+  local cmember = message.guild:getMember(message.author)
+  if cmember:hasRole(privatestuff.modroleid) then return true end
+  for _, id in ipairs(config.admins) do
+    print(""..cmember.id.." = "..id)
+    if cmember.id == id then return true end
+  end
+  return false
+end
+
+local rcf = dofile('commands/reloadconfig.lua')
+rcf.run(nil,nil)
 local rdb = dofile('commands/reloaddb.lua')
 rdb.run(nil,nil,true)
 print("exited rdb.run")
@@ -53,4 +65,4 @@ stockshop()
 
 client:run(privatestuff.botid)
 
-client:setGame("with cards | "..privatestuff.prefix.."help")
+client:setGame("with cards | "..config.prefix.."help")

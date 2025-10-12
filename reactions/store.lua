@@ -1,5 +1,8 @@
 local reaction = {}
 function reaction.run(message, interaction, data, response)
+  local function send(text)
+    if interaction then interaction:reply(text) else message.channel:send(text) end
+  end
   local item1 = data.item1
   local numcards = data.numcards
   local ujf = "savedata/" .. message.author.id .. ".json"
@@ -10,12 +13,12 @@ function reaction.run(message, interaction, data, response)
   if response == "yes" then
     print('user1 has accepted')
     if not uj.inventory[item1] then
-      interaction:reply(lang.reaction_dont_have)
+      send(lang.reaction_dont_have)
       return
     end
 
     if uj.inventory[item1] < numcards then
-      interaction:reply(formatstring(lang.reaction_not_enough, {cdb[item1].name}))
+      send(formatstring(lang.reaction_not_enough, {cdb[item1].name}))
       return
     end
 
@@ -28,7 +31,7 @@ function reaction.run(message, interaction, data, response)
 
     uj.timesstored = uj.timesstored and uj.timesstored + numcards or numcards
 
-	interaction:reply(formatstring(lang.stored_message, {uj.id, uj.pronouns["their"], numcards, cdb[item1].name}, lang.plural_s))
+    send(formatstring(lang.stored_message, {uj.id, uj.pronouns["their"], numcards, cdb[item1].name}, lang.plural_s))
 
     dpf.savejson(ujf,uj)
     cmd.checkcollectors.run(message, {}, message.channel)
@@ -37,12 +40,7 @@ function reaction.run(message, interaction, data, response)
 
   if response == "no" then
     print('user1 has denied')
-    formatstring(lang.reaction_stopped, {uj.id, uj.pronouns["their"], cdb[item1].name}, lang.plural_s)
-	if uj.lang == "ko" then
-		interaction:reply(lang.reaction_stopped_1 .. uj.id .. lang.reaction_stopped_2 .. lang.reaction_stopped_3 .. cdb[item1].name .. lang.reaction_stopped_4 .. lang.reaction_stopped_5)
-    else
-		interaction:reply(lang.reaction_stopped_1 .. uj.id .. lang.reaction_stopped_2 .. uj.pronouns["their"] .. lang.reaction_stopped_3 .. cdb[item1].name .. lang.reaction_stopped_4 .. (numcards == 1 and "" or lang.needs_plural_s == "true" and lang.plural_s) .. lang.reaction_stopped_5)
-	end
+    send(formatstring(lang.reaction_stopped, {uj.id, uj.pronouns["their"], cdb[item1].name}, lang.plural_s))
   end
 end
 return reaction

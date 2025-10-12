@@ -25,6 +25,7 @@ function dpf.loadtracery(f)
 end
 
 function dpf.savejson(f,w)
+  print("dpf saving " .. f)
   local cf = io.open(f, "w")
   cf:write(json.encode(w))
   cf:close()

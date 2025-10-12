@@ -9,7 +9,7 @@ function reaction.run(message, interaction, data, response)
 
   if response == "yes" then
     print('user1 has accepted')
-    if uj.lastequip + 6 > time:toHours() then
+    if uj.lastequip + config.cooldowns.equip > time:toHours() then
       interaction:reply(lang.reaction_not_cooldown)
       return
     end

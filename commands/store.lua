@@ -50,17 +50,7 @@ function command.run(message, mt)
   if not uj.skipprompts then
     ynbuttons(message,formatstring(lang.confirm_message, {uj.id, numcards, cdb[item1].name}, lang.plural_s), "store", {numcards = numcards, item1 = item1}, uj.id, uj.lang)
   else
-    uj.inventory[item1] = uj.inventory[item1] - numcards
-    if uj.inventory[item1] == 0 then uj.inventory[item1] = nil end
-
-    uj.storage[item1] = uj.storage[item1] and uj.storage[item1] + numcards or numcards
-    uj.timesstored = uj.timesstored and uj.timesstored + numcards or numcards
-	
-    message.channel:send(formatstring(lang.stored_message, {uj.id, uj.pronouns["their"], numcards, cdb[item1].name}, lang.plural_s))
-
-    dpf.savejson(ujf, uj)
-    cmd.checkcollectors.run(message, mt)
-    cmd.checkmedals.run(message, mt)
+    cmdre.store.run(message, nil,{numcards = numcards, item1 = item1}, "yes")
   end
 end
 return command

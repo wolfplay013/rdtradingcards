@@ -2,7 +2,7 @@
 	"needs_plural_s": true,
 	"plural_s": "s",
 	
-	"no_user_1": "Sorry, but I could not find a user named {1} in the database. Make sure that you have spelled it right, and that they have at least pulled a card to register!",
+	"no_user": "Sorry, but I could not find a user named {1} in the database. Make sure that you have spelled it right, and that they have at least pulled a card to register!",
 	
 	"embed_title": "Full Inventory",
 	"embed_title_season": "Full Inventory (Season {1})",

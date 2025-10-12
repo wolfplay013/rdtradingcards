@@ -1,8 +1,7 @@
 local command = {}
 function command.run(message, mt)
   print(message.author.name .. " did !generategive")
-  local cmember = message.guild:getMember(message.author)
-  if not cmember:hasRole(privatestuff.modroleid) then
+  if not isauthoradmin(message) then
     message.channel:send("haha no, nice try")
     return
   end

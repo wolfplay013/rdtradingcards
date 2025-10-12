@@ -55,7 +55,7 @@ function command.run(message, mt)
 		if not uj.lastbox then
 			uj.lastbox = -24
 		end
-		local cooldown = (uj.equipped == "stainedgloves") and 8 or 11.5
+		local cooldown = (uj.equipped == "stainedgloves") and config.cooldowns.box_gloves or config.cooldowns.box
 		if uj.lastbox + cooldown > time:toHours() then
 			local minutesleft = math.ceil(uj.lastbox * 60 - time:toMinutes() + cooldown * 60)
 			local durationtext = formattime(minutesleft, uj.lang)
@@ -80,46 +80,8 @@ function command.run(message, mt)
 			}, "usebox", {}, uj.id, uj.lang)
 			return true
 		else
-			local iptable = {}
-			for k, v in pairs(uj.inventory) do
-				for i = 1, v do
-					table.insert(iptable, k)
-				end
-			end
-
-			local givecard = iptable[math.random(#iptable)]
-			print("user giving " .. givecard)
-			local boxpoolindex = math.random(#wj.boxpool)
-			local getcard = wj.boxpool[boxpoolindex]
-			print("user getting " .. getcard)
-
-			uj.inventory[getcard] = uj.inventory[getcard] and uj.inventory[getcard] + 1 or 1
-			uj.inventory[givecard] = uj.inventory[givecard] - 1
-			if uj.inventory[givecard] == 0 then
-				uj.inventory[givecard] = nil
-			end
-
-			wj.boxpool[boxpoolindex] = givecard
-
-			message.channel:send(formatstring(lang.boxed_message,
-				{ uj.id, cdb[givecard].name, uj.pronouns["their"], cdb[getcard].name, getcard }))
-
-			if not uj.storage[getcard] then
-				if not uj.togglecheckcard then
-					message.channel:send(formatstring(lang.not_in_storage, { cdb[getcard].name }))
-				end
-			end
-			uj.timesusedbox = uj.timesusedbox and uj.timesusedbox + 1 or 1
-			uj.lastbox = time:toHours()
-			if uj.sodapt then
-				if uj.sodapt.box then
-					uj.lastbox = uj.lastbox + uj.sodapt.box
-					uj.sodapt.box = nil
-					if uj.sodapt == {} then
-						uj.sodapt = nil
-					end
-				end
-			end
+			cmdre.usebox.run(message, nil,nil, "yes")
+			return true
 		end
 
 		-- elseif request == "scanner" and wj.ws >= 902 then

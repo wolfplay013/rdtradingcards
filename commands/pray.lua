@@ -10,18 +10,18 @@ local time = sw:getTime()
     return
   end
   
-  local cooldown = 23/24
+  local cooldown = config.cooldowns.pray
   if uj.equipped == "faithfulnecklace" then
-    cooldown = 20/24
+    cooldown = config.cooldowns.pray_necklace
   end
 
   if not uj.lastprayer then
-    uj.lastprayer = -3
+    uj.lastprayer = -30
   end
 
-  if uj.lastprayer + cooldown > time:toDays() then
+  if uj.lastprayer + cooldown > time:toHours() then
     --extremely jank implementation, please make this cleaner if possible
-    local minutesleft = math.ceil(uj.lastprayer * 1440 - time:toMinutes() + cooldown * 1440)
+    local minutesleft = math.ceil(uj.lastprayer * 60 - time:toMinutes() + cooldown * 60)
     local durationtext = formattime(minutesleft, uj.lang)
     message.channel:send(formatstring(lang.wait_message, {durationtext}))
     return
@@ -29,7 +29,7 @@ local time = sw:getTime()
   
   uj.tokens = uj.tokens and uj.tokens + 1 or 1
   uj.timesprayed = uj.timesprayed and uj.timesprayed + 1 or 1
-  uj.lastprayer = time:toDays()
+  uj.lastprayer = time:toHours()
   
   if uj.sodapt then
     if uj.sodapt.pray then

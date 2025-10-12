@@ -16,7 +16,7 @@ function command.run(message, mt)
   local uj2f = usernametojson(mt[1])
 
   if not uj2f then
-    message.channel:send(lang.no_user_1 .. mt[1] .. lang.no_user_2)
+    message.channel:send(formatstring(lang.no_user, {mt[1]}))
     return
   end
 
@@ -61,7 +61,7 @@ function command.run(message, mt)
   local isplural2 = numtokens ~= 1 and lang2.needs_plural_s == true and lang2.plural_s or ""
 
 
-  _G['giftedmessage'] = formatstring(lang.gifted_message, { numtokens, uj2.id }, isplural)
+  _G['giftedmessage'] = formatstring(lang.gifted_message, { numtokens, uj2.id }, lang.plural_s)
   if uj.lang == uj2.lang then
     if not uj2.togglechecktoken then
       _G['giftedmessage'] = giftedmessage .. "\n" .. formatstring(lang.checktoken2g, { uj2.tokens, uj2.pronouns["their"] }, lang.plural_s)

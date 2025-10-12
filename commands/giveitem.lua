@@ -78,7 +78,7 @@ function command.run(message, mt)
   
   if not (uj.consumables[curfilename] >= numitems) then
     print("user doesn't have enough items")
-    message.channel:send(formatstring(lang.not_enough_1, {consdb[curfilename].name}))
+    message.channel:send(formatstring(lang.not_enough, {consdb[curfilename].name}))
     return
   end
 

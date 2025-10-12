@@ -1,9 +1,8 @@
 local command = {}
 function command.run(message, mt,asdf,content)
   print("c!runlua!!!!!")
-  local cmember = message.guild:getMember(message.author)
   print(mt[1])
-  if cmember:hasRole(privatestuff.modroleid) and (not content) then
+  if isauthoradmin(message) and (not content) then
     message.channel:send('Ok, running!')
     local request = table.concat(mt, "/")
 

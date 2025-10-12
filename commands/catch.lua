@@ -22,9 +22,9 @@ function command.run(message, mt)
 
   if not curfilename then
     if nopeeking then
-      message.channel:send(lang.nopeeking_1 .. mt[1] .. lang.nopeeking_2)
+      message.channel:send(formatstring(lang.nopeeking, {mt[1]}))
     else
-      message.channel:send(lang.nodatabase_1 .. mt[1] .. lang.nodatabase_2)
+      message.channel:send(formatstring(lang.nodatabase, {mt[1]}))
     end
     return
   end
@@ -34,9 +34,9 @@ function command.run(message, mt)
   if not (tj[curfilename]) then
     print("user doesnt have item")
     if nopeeking then
-      message.channel:send(lang.nopeeking_1 .. mt[1] .. lang.nopeeking_2)
+      message.channel:send(formatstring(lang.nopeeking, {mt[1]}))
     else
-      message.channel:send(lang.notthrown_1 .. caughtname .. lang.notthrown_2)
+      message.channel:send(formatstring(lang.notthrown, {mt[1]}))
     end
     return
   end

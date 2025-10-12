@@ -4,59 +4,40 @@
   "cards": [
     {
       "chance": 2,
-      "filename": "nastiest",
-      "name": "The Nastiest",
+      "filename": "flymywings",
+      "name": "Fly, My Wings",
       "type": "Super Rare",
-      "description": "(Level by 3T)",
-      "smell": "[TODO]",
+      "description": "(Level by Mysthaps, fiascone)",
+      "smell": "Broken Dreams",
       "season": 11,
-      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1412155446633955391/nastiest.png",
-      "bonuses": {
-        "rustysword":true
-      }
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426886689690882079/flymywings.png",
+      "bonuses": {}
     },
     {
       "chance": 2,
-      "filename": "metronogik",
-      "name": "Metronogik",
+      "filename": "nulctrlsrt",
+      "name": "NULCTRL",
       "type": "Super Rare",
-      "description": "(Level by DPS2004)",
-      "smell": "[TODO]",
+      "description": "(Level by Zulax, TwoWayFort)",
+      "smell": "club",
       "season": 11,
-      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1412155446000746636/metronogik.png",
-      "bonuses": {
-        "driftingmetronome":true
-      }
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426886690236272682/nulctrlsrt.png",
+      "bonuses": {}
     },
     {
-      "chance": 1,
-      "filename": "mineblox",
-      "name": "Mineblox",
-      "type": "Ultra Rare",
-      "description": "(Level by Kin, Zoresthrough, 3T)",
-      "smell": "Sandbox games",
+      "chance": 2,
+      "filename": "sp0m0ky",
+      "name": "sp0m0ky",
+      "type": "Super Rare",
+      "description": "(Level by Mysthaps, 1257Plays, Symphony)",
+      "smell": "club",
       "season": 11,
-      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1410325951287394438/guiguidc.png",
-      "bonuses": {
-        "filmreel":true,
-        "paddedstickersheet":true,
-        "valentinesdaycard":true
-      }
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426886690819014756/sp0m0ky.png",
+      "bonuses": {}
     },
-    {
-      "chance": 1,
-      "filename": "thegovknows",
-      "name": "The Government Knows",
-      "type": "Ultra Rare",
-      "description": "(Level by #Guigui, DPS2004)",
-      "smell": "Government documents",
-      "season": 11,
-      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1412155447187869788/thegovknows.png",
-      "bonuses": {
-        "rustysword":true,
-        "cafemixtape":true
-      }
-    },
+    
+    
+    
     {
       "chance": 2,
       "filename": "wetmoist",
@@ -69,6 +50,152 @@
       "bonuses": {
         "paddedstickersheet":true
       }
+    },
+    {
+      "chance": 2,
+      "filename": "fledgling",
+      "name": "Fledgling",
+      "type": "Super Rare",
+      "description": "(Level by TNS)",
+      "smell": "[hey kin wheres the taste tier list]",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426949429717631138/fledgling.png",
+      "bonuses": {
+        "paddedstickersheet":true
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "mytime",
+      "name": "My Time",
+      "type": "Super Rare",
+      "description": "(Level by WolfPlay013)",
+      "smell": "Dreams",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423041205087764520/mytime.png",
+      "bonuses": {
+      }
+    },
+    
+    
+    
+    {
+      "chance": 2,
+      "filename": "favoritesidekick",
+      "name": "Your favorite sidekick",
+      "type": "Super Rare",
+      "description": "(Level by 3xp0)",
+      "smell": "Toothpaste",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423041204064620694/favoritesidekick.png",
+      "bonuses": {
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "neverknow",
+      "name": "You will never know",
+      "type": "Super Rare",
+      "description": "(Level by Zulax, TwoWayFort)",
+      "smell": "[hi chat]",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1426949430262763570/neverknow.png",
+      "bonuses": {
+        "paddedstickersheet": true
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "thegovknows",
+      "name": "The Government Knows",
+      "type": "Super Rare",
+      "description": "(Level by #Guigui, DPS2004)",
+      "smell": "Government documents",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423041205595537553/thegovknows.png",
+      "bonuses": {
+        "rustysword":true,
+        "cafemixtape":true
+      }
+    },
+    
+    
+    
+    {
+      "chance": 2,
+      "filename": "nastiest",
+      "name": "The Nastiest",
+      "type": "Super Rare",
+      "description": "(Level by 3T)",
+      "smell": "Nasty",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1412155446633955391/nastiest.png",
+      "bonuses": {
+        "rustysword":true
+      }
+    },
+    {
+      "chance": 1,
+      "filename": "metronogik",
+      "name": "Metronogik",
+      "type": "Ultra Rare",
+      "description": "(Level by DPS2004)",
+      "smell": "Broken rhythms",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423041204567932998/metronogik.png",
+      "bonuses": {
+        "driftingmetronome":true
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "dreamingscales",
+      "name": "Dreaming Scales",
+      "type": "Super Rare",
+      "description": "(Level by ThatThingAxi, pyroshark02, TwoWayFort)",
+      "smell": "Dreams",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423036379398406237/dreamingscales.png",
+      "bonuses": {
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "rainingminotaurs",
+      "name": "It's Raining Minotaurs",
+      "type": "Super Rare",
+      "description": "(Level by Zulax, TwoWayFort)",
+      "smell": "\"Milk\"",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423036381747220632/rainingminotaurs.png",
+      "bonuses": {
+        "fancyteaset": true,
+        "decaf": true
+      }
+    },
+    {
+      "chance": 2,
+      "filename": "killsomebody",
+      "name": "K1LL SOMEBODY",
+      "type": "Super Rare",
+      "description": "(Level by Layspark)",
+      "smell": "Murder",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423036380627472465/killsomebody.png",
+      "bonuses": {
+        "lunarrocks": true
+      }
+    },
+    {
+      "chance": 1,
+      "filename": "cheapproperties",
+      "name": "Cheap Properties",
+      "type": "Ultra Rare",
+      "description": "(Level by Claire de Lune, fiascone)",
+      "smell": "Imposter syndrome",
+      "season": 11,
+      "embed": "https://media.discordapp.net/attachments/1030420309947469904/1423036378849218683/cheapproperties.png",
+      "bonuses": {},
     }
   ]
 }

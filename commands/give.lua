@@ -108,7 +108,7 @@ function command.run(message, mt)
   local isplural = numcards ~= 1 and lang.needs_plural_s == true and lang.plural_s or ""
   local isplural2 = numcards ~= 1 and lang2.needs_plural_s == true and lang2.plural_s or ""
 
-  _G['giftedmessage'] = formatstring(lang.giftedmessage, {numcards, cdb[curfilename].name, uj2.id}, lang.plural_s)
+  _G['giftedmessage'] = formatstring(lang.gifted_message, {numcards, cdb[curfilename].name, uj2.id}, lang.plural_s)
 
   _G['recievedmessage'] = formatstring(lang2.recieved_message, {uj.id, numcards, cdb[curfilename].name}, lang2.plural_s)
   if uj.lang == uj2.lang then

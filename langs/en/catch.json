@@ -9,5 +9,5 @@
 	
 	"caught": "{1} has caught a **{2}** {3}! The **{2}** {3} has been added to {4} inventory.",
 	
-	"not_in_storage_1": "You do not have the **{1}** card in your storage!"
+	"not_in_storage": "You do not have the **{1}** card in your storage!"
 }

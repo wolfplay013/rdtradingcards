@@ -16,6 +16,21 @@
         "fanonplaceholder": true
       },
       "embed": "https://cdn.discordapp.com/attachments/1030420309947469904/1410392838163664967/aimeebayr.png"
+    },
+    {
+      "chance": 2,
+      "filename": "aimeebaysr",
+      "name": "Aimee Bay (Rare)",
+      "type": "Rare",
+      "description": "(Art by Claire de Lune)",
+      "smell": "Bacterial infection",
+      "season": 11,
+      "bonuses": {
+        "okamiiscollar": true,
+        "oversizedstethoscope": true,
+        "fanonplaceholder": true
+      },
+      "embed": "https://media.discordapp.net/attachments/794420141802651658/1425960816892579840/aimeesr5.png"
     }
   ]
 }

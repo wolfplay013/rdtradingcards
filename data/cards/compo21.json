@@ -1,0 +1,21 @@
+{
+	"groupname":"compo21",
+	"basechance":3,
+	"cards": [
+		{
+			"chance": 1,
+			"filename": "mineblox",
+			"name": "Mineblox",
+			"type": "Ultra Rare",
+			"description": "(Level by Kin, Zoresthrough, 3T)",
+			"smell": "Sandbox games",
+			"season": 11,
+			"embed": "https://media.discordapp.net/attachments/1030420309947469904/1410325951287394438/guiguidc.png",
+			"bonuses": {
+				"filmreel":true,
+				"paddedstickersheet":true,
+				"valentinesdaycard":true
+			}
+		},
+	]
+}

@@ -14,7 +14,7 @@ function command.run(message, mt)
 			uj.items = { nothing = true }
 		end
 		if wj.ws ~= 506 then
-			local itempt = {}
+			--[[local itempt = {}
 			for k in pairs(itemdb) do
 				if uj.items["fixedmouse"] then
 					if not uj.items[k] and k ~= "brokenmouse" then table.insert(itempt, k) end
@@ -23,11 +23,11 @@ function command.run(message, mt)
 				end
 			end
 			if #itempt == 0 then
-				message.channel:send(lang.allitems)
+				message.channel:send(lang.error_allitems)
 				return true
 			end
 			if uj.tokens < 3 then
-				message.channel:send(lang.notokens)
+				message.channel:send(lang.error_no_tokens)
 				return true
 			end
 			if not uj.skipprompts then
@@ -56,7 +56,17 @@ function command.run(message, mt)
 				print("alright let's see: action2: n°"..caction2.." : "..action2[caction2])
 				message.channel:send(formatstring(lang.used_machine,
 					{ dep[cdep], truaction, size[csize], action2[caction2], itemdb[newitem].name, speen[cspeen] }))
+			end]]
+			if not uj.skipprompts then
+				ynbuttons(message, {
+					color = uj.embedc,
+					title = lang.using_machine,
+					description = formatstring(lang.use_machine, { uj.tokens }),
+				}, "usemachine", {}, uj.id, uj.lang)
+			else
+				cmdre.usemachine.run(message, null,null,"yes")
 			end
+			return true
 		else
 			if uj.tokens >= 4 then
 				ynbuttons(message, {

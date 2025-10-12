@@ -1,12 +1,11 @@
 local command = {}
 function command.run(message, mt, overwrite)
   local authcheck
-  
+
   if overwrite then
     authcheck = true
   elseif message.guild then
-    local cmember = message.guild:getMember(message.author)
-    authcheck = cmember:hasRole(privatestuff.modroleid)
+    authcheck = isauthoradmin(message)
   end
   
   if authcheck then
@@ -117,14 +116,14 @@ function command.run(message, mt, overwrite)
     }
 
     local errorping
-    if privatestuff.errorping then
+    if config.errorping then
       errorping = true
     else
       errorping = false
     end
 
-    if privatestuff.prefix then
-      _G["prefix"] = privatestuff.prefix
+    if config.prefix then
+      _G["prefix"] = config.prefix
     end
     
     _G['defaultworldsave'] = {
@@ -182,6 +181,21 @@ function command.run(message, mt, overwrite)
       itemprice = 4
     }
     
+    _G["rarities"] = {
+      r = "Rare",
+      sr = "Super Rare",
+      ur = "Ultra Rare",
+      dc = "Discontinued",
+      alt = "Alternate",
+      dcr = "Discontinued Rare",
+      dcsr = "Discontinued Super Rare",
+      dcur = "Discontinued Ultra Rare",
+      dcalt = "Discontinued Alternate",
+      altalt = "Alternate Alternate",
+      pico8 = "PICO-8",
+    }
+    _G["rarities_invert"] = {}
+    for k,v in pairs(rarities) do _G["rarities_invert"][v] = k end
     
     _G['amtable'] = {
       pyrowmid = {"strange machine", "machine", "panda"},
@@ -611,14 +625,14 @@ function command.run(message, mt, overwrite)
 
       print("Button pressed, running " .. etype)
 
-      local status, err = pcall(function ()
+      local status, err = xpcall(function ()
         cmdre[etype].run(message, interaction, data, interaction.data.custom_id)
-      end)
+      end, debug.traceback)
 
       if not status then
         print("uh oh")
         if errorping then
-          message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (" .. privatestuff.errorping .. " please fix this thanks)")
+          message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (" .. config.errorping .. " please fix this thanks)")
         else
           message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (please fix this thanks)")
         end
@@ -652,6 +666,7 @@ function command.run(message, mt, overwrite)
     addcommand("store",cmd.store)
     addcommand("storage",cmd.storage)
     addcommand("reloaddb",cmd.reloaddb)
+    addcommand("reloadconfig",cmd.reloadconfig)
     addcommand("medals",cmd.medals)
     addcommand("crash",cmd.crash)
     addcommand("showmedal",cmd.showmedal)
@@ -705,6 +720,7 @@ function command.run(message, mt, overwrite)
     addcommand("b",cmd.use,0,{"box"})
     addcommand("throw",cmd.throw)
     addcommand("yeet",cmd.throw) --im a comedy genius
+    addcommand("toss",cmd.throw) --suggested by axi
     addcommand("vipstest",cmd.vipstest,0)
     addcommand("catch",cmd.catch)
     addcommand("giveitem",cmd.giveitem)
@@ -769,13 +785,13 @@ function command.run(message, mt, overwrite)
             end
           end
           print("nmt: " .. inspect(nmt))
-          local status, err = pcall(function ()
+          local status, err = xpcall(function ()
             v.commandfunction.run(message,nmt,v.usebypass,content)
-          end)
+          end, debug.traceback)
           if not status then
             print("uh oh")
             if errorping then
-              message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (" .. privatestuff.errorping .. " please fix this thanks)")
+              message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (" .. config.errorping .. " please fix this thanks)")
             else
               message.channel:send("Oops! An error has occured! Error message: ```" .. err .. "``` (please fix this thanks)")
             end
@@ -1009,6 +1025,7 @@ function command.run(message, mt, overwrite)
       end
       return durationtext
     end
+    
 
     _G['clearcache'] = function()
       os.remove("test.txt")
@@ -1154,6 +1171,12 @@ function command.run(message, mt, overwrite)
         found = true
       end
       return found
+    end
+    
+    _G['tablelength'] = function(T)
+      local count = 0
+      for _ in pairs(T) do count = count + 1 end
+      return count
     end
 
     print("getchickimage")
