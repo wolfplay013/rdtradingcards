@@ -6,7 +6,7 @@ function command.run(message, mt, uj, wj)
       lang = dpf.loadjson("langs/" .. uj.lang .. "/rob.json")
       local time = sw:getTime()
       local stocksleft = uj.lastrob + 4 - sj.stocknum
-      local stockstring = lang.more_restock_1 .. stocksleft .. lang.more_restock_2
+      local stockstring = formatstring(lang.more_restock, {stocksleft}, lang.plural_s)
       if lang.needs_plural_s == true then
         if stocksleft > 1 then
           stockstring = stockstring .. lang.plural_s
