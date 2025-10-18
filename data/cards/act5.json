@@ -41,7 +41,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Plaster and Fiberglass",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true
 	  },
@@ -55,7 +54,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Crackerjacks",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true,
 		"rustysword": true
@@ -70,7 +68,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Overexertion",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true
 	  },
@@ -84,7 +81,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Hippocratic Oath Violations",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true
 	  },
@@ -98,7 +94,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Wrapped-Up Loose Ends",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true,
 		"rustysword": true,
@@ -114,7 +109,6 @@
 	  "description": "(Level by 7th Beat Games)",
 	  "smell": "Team Spirit",
 	  "season": 11,
-	  "spoiler": true,
 	  "bonuses": {
 		"sportsplaceholder": true,
 		"rustysword": true,

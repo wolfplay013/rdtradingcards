@@ -201,7 +201,7 @@ function command.run(message, mt)
       if nopeeking then
         message.channel:send(formatstring(lang.error_nopeeking, {request}))
       else
-        message.channel:send(formatstring(lang.no_card_1, {request}))
+        message.channel:send(formatstring(lang.no_card, {request}))
       end
     end
 

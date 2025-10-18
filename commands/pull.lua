@@ -188,7 +188,8 @@ _________________```]])
         color = uj.embedc,
         title = title,
         description = msg,
-        image = {url = type(cdb[v].embed) == "table" and cdb[v].embed[math.random(#cdb[v].embed)] or cdb[v].embed}
+        image = {url = type(cdb[v].embed) == "table" and cdb[v].embed[math.random(#cdb[v].embed)] or cdb[v].embed},
+        footer = {text = "Season "..cdb[v].season}
       }}
     else
       print("spider moments")

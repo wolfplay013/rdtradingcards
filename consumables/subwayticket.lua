@@ -11,7 +11,7 @@ function item.run(uj, ujf, message, mt, interaction)
 
     uj.conspt = "sbubby"
     replying:reply(lang.subwayticket_message)
-    local randtime = math.random(12, 24)
+    local randtime = config.cooldowns.pull * (math.random(12, 24)/11.5)
     uj.lastpull = uj.lastpull - randtime
     message:reply(formatstring(lang.cooldown_decrease, {randtime}))
     dpf.savejson(ujf, uj)

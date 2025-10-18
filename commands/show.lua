@@ -42,7 +42,8 @@ function command.run(message, mt)
       description = formatstring(lang.show_card, {cdb[curfilename].name, curfilename, embeddescription}),
       image = {
         url = type(cdb[curfilename].embed) == "table" and cdb[curfilename].embed[math.random(#cdb[curfilename].embed)] or cdb[curfilename].embed
-      }
+      },
+      footer = {text = "Season "..cdb[curfilename].season}
     }}
   else
     print("spiderrrrrrr")

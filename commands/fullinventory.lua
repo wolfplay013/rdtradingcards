@@ -8,6 +8,8 @@ function command.run(message, mt)
   local enableShortNames = true
   local enableSeason = false
   
+  local filterUnstored = false
+  
   local filterSeasons = {}
   local filterSeasonsCount = 0
   local filterRarities = {}
@@ -19,7 +21,7 @@ function command.run(message, mt)
   end
 
   for index, value in ipairs(args) do
-    if value == "-s" then -- wolfplay's suggestion
+    if value == "-s" then
       enableShortNames = true
 --      print("-s enabled")
     elseif string.find(value, "-season") then
@@ -42,6 +44,8 @@ function command.run(message, mt)
 		    filterRaritiesCount = filterRaritiesCount+1
   	  	print("filtering for rarity "..rarity)
   		end
+    elseif value == "-unstored" then
+      filterUnstored = true
 		else
 			if value[0] ~= '-' and (tonumber(value) > 11 or not tonumber(value)) then
 				filename = usernametojson(value)
@@ -71,6 +75,14 @@ function command.run(message, mt)
     end
   end
 
+	if filterUnstored then
+	  for k,v in pairs(invfilter) do
+	    if uj.storage[k] and uj.storage[k] > 0 then
+	      invfilter[k] = nil
+	    end
+	  end
+	end
+	
   local numkey = tablelength(invfilter)
 
   
@@ -106,9 +118,8 @@ function command.run(message, mt)
 	embedtitle = formatstring(lang.embed_title_season, {filtertitle})
   end
 
-	if filterRarity then
-		embedtitle = embedtitle .. formatstring(lang.rarity, {raritytext})
-	end
+	if filterRarity then embedtitle = embedtitle .. formatstring(lang.rarity, {raritytext}) end
+	if filterUnstored then embedtitle = embedtitle .. " (unstored)" end
   
   local contentstring = (uj.id == message.author.id and lang.embed_your or formatstring(lang.embed_s, {"<@" .. uj.id .. ">"})) .. lang.embed_contains
   local previnvstring = ''

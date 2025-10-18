@@ -6,6 +6,8 @@ function command.run(message, mt)
 
   local enableShortNames = true
   local enableSeason = false
+
+  local filterUnstored = false
   
   local filterSeasons = {}
   local filterSeasonsCount = 0
@@ -22,11 +24,9 @@ function command.run(message, mt)
   for index, value in ipairs(args) do
     if tonumber(value) then
       pagenumber = math.floor(tonumber(value))
-    elseif value == "-s" then -- wolfplay's suggestion
+    elseif value == "-s" then
       enableShortNames = true
---      print("-s enabled")
-    end
-    if string.find(value, "-season") then
+    elseif string.find(value, "-season") then
       if value == "-season" then
         enableSeason = true
   	  	print("-season enabled")
@@ -46,6 +46,8 @@ function command.run(message, mt)
 		    filterRaritiesCount = filterRaritiesCount+1
   	  	print("filtering for rarity "..rarity)
   		end
+    elseif value == "-unstored" then
+      filterUnstored = true
 		else
 			if value[0] ~= '-' and (not tonumber(value) or tonumber(value) > 11) then
 				filename = usernametojson(value)
@@ -74,6 +76,14 @@ function command.run(message, mt)
 			end
 		end
 	end
+	
+	if filterUnstored then
+	  for k,v in pairs(invfilter) do
+	    if uj.storage[k] and uj.storage[k] > 0 then
+	      invfilter[k] = nil
+	    end
+	  end
+	end
 
   pagenumber = math.max(1, pagenumber)
   
@@ -87,7 +97,8 @@ function command.run(message, mt)
 		table.insert(invtable,
 			"**" .. (cdb[k].name or k) .. "** x" .. v ..
 			(enableShortNames and (" ("..k..") ") or "") ..
-			(enableSeason and formatstring(lang.season, {cdb[k].season}) or "") .."\n"
+			(enableSeason and formatstring(lang.season, {cdb[k].season}) or "")
+			.."\n"
 		)
 	end
   table.sort(invtable)
@@ -126,6 +137,7 @@ function command.run(message, mt)
 	else
 		filtertitle = seasonnum
 	end
+	if filterUnstored then filtertitle = filtertitle .. " (unstored)" end
 	embedtitle = formatstring(lang.embed_title_season, {message.author.name, filtertitle})
   end
 
