@@ -16,6 +16,34 @@
         "fanonplaceholder": true
       },
       "embed": "https://cdn.discordapp.com/attachments/1030420309947469904/1410389188167073943/srtgoatr.png"
+    },
+    {
+      "chance": 2,
+      "filename": "srtgoatsr",
+      "name": "1F410 (Super Rare)",
+      "type": "Super Rare",
+      "description": "(Art by fiascone)",
+      "smell": "Viruses",
+      "season": 11,
+      "bonuses": {
+        "oversizedstethoscope": true,
+        "fanonplaceholder": true
+      },
+      "embed": "https://media.discordapp.net/attachments/794420141802651658/1434195987651367124/IMG_5591.png"
+    },
+    {
+      "chance": 1,
+      "filename": "srtgoatur",
+      "name": "1F410 (Ultra Rare)",
+      "type": "Ultra Rare",
+      "description": "(Art by #Guigui)",
+      "smell": "Viruses",
+      "season": 11,
+      "bonuses": {
+        "oversizedstethoscope": true,
+        "fanonplaceholder": true
+      },
+      "embed": "https://media.discordapp.net/attachments/794420141802651658/1434194848805556374/srtgoatur.png"
     }
   ]
 }

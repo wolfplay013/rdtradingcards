@@ -13,7 +13,7 @@
 		"sportsplaceholder": true,
 		"okamiiscollar": true
 	  },
-	  "embed": "https://cdn.discordapp.com/attachments/829197797789532181/872161240066187275/bodybuilderr.png"
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1434196520189693982/bodybuilderr.png"
 	},
 	{
 	  "chance": 2,
@@ -42,11 +42,24 @@
 	  "embed": "https://cdn.discordapp.com/attachments/829197797789532181/873788559251873792/bodybuilderur.png"
 	},
 	{
+	  "chance": 1,
+	  "filename": "bodybuilderdc",
+	  "name": "Bodybuilder (Discontinued)",
+	  "type": "Discontinued",
+	  "description": "(Art by Winston Lee)",
+	  "smell": "Protein Shakes",
+	  "season": 11,
+	  "bonuses": {
+		"sportsplaceholder": true
+	  },
+	  "embed": "https://media.discordapp.net/attachments/1030420309947469904/1434196519665537064/bodybuilderdc.png"
+	},
+	{
 	  "chance": 0,
 	  "filename": "bodybuilderc",
 	  "name": "Bodybuilder (Collector's)",
 	  "type": "Collector's",
-	  "description": "Requires the Rare, Super Rare, and Ultra Rare variants of Bodybuilder (Art by Pseuu)",
+	  "description": "Requires the Rare, Super Rare, Ultra Rare, and Discontinued variants of Bodybuilder (Art by Pseuu)",
 	  "smell": "Protein Shakes",
 	  "season": 7,
 	  "bonuses": {
